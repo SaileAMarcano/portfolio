@@ -95,3 +95,225 @@ body {
     outline: 2px solid var(--red);
     outline-offset: 3px;
 }
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space);
+    padding: 0.875rem calc(var(--space) * 1.5);
+    background-color: var(--paper);
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    font-size: 1.125rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+.logo-dot {
+    color: var(--red);
+}
+
+.nav-toggle {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius);
+}
+
+.nav-toggle-bar,
+.nav-toggle-bar::before,
+.nav-toggle-bar::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: var(--ink);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle-bar::before,
+.nav-toggle-bar::after {
+    content: "";
+    position: absolute;
+}
+
+.nav-toggle-bar::before {
+    transform: translateY(-7px);
+}
+
+.nav-toggle-bar::after {
+    transform: translateY(7px);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar {
+    background-color: transparent;
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar::before {
+    transform: translateY(0) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] .nav-toggle-bar::after {
+    transform: translateY(0) rotate(-45deg);
+}
+
+.nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: var(--space) calc(var(--space) * 1.5) calc(var(--space) * 1.5);
+    background-color: var(--space);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav[data-open="true"] {
+    display: block;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.nav-list a {
+    display: block;
+    padding: 0.625rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    color: var(--ink-soft);
+}
+
+.nav-list a:hover {
+    background-color: var(--line);
+    color: var(--ink);
+}
+
+@media (min-width: 48em) {
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        position: static;
+        display: block;
+        padding: 0;
+        background: none;
+        border: none;
+    }
+
+    .nav-list {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .nav-list a {
+        padding: 0.4375rem 0.75rem;
+        font-size: 0.875rem;
+    }
+
+    .nav-cta {
+        background-color: var(--red);
+        color: var(--surface);
+    }
+
+    .nav-cta:hover {
+        background-color: var(--ink);
+        color: var(--surface);
+    }
+}
+
+.hero {
+    display: grid;
+    gap: calc(var(--space) * 2);
+    align-items: center;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding: calc(var(--space) * 3) calc(var(--space) * 1.5) calc(var(--space) * 4);
+}
+
+.hero-kicker {
+    margin-bottom: 0.875rem;
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    color: var(--red);
+}
+
+.hero-title {
+    max-width: 15ch;
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 6vw, 3.25rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+
+.hero-intro {
+    max-width: 46ch;
+    margin-bottom: calc(var(--space) * 1.75);
+    color: var(--ink-soft);
+    line-height: 1.7;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.375rem;
+    border-radius: var(--radius);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: transform 0.08s ease, border-width 0.08s ease;
+}
+
+.btn-primary {
+    background-color: var(--ink);
+    color: var(--paper);
+    border-bottom: 3px solid var(--red);
+}
+
+.btn-secondary {
+    background-color: var(--line);
+    color: var(--ink);
+    border-bottom: 3px solid var(--ink-mute);
+}
+
+.btn:active {
+    transform: translateY(2px);
+    border-bottom-width: 1px;
+}
+
+.hero-figure {
+    justify-self: start;
+}
+
+.hero-figure img {
+    width: clamp(140px, 22vw, 190px);
+    height: auto;
+}
+
+@media (min-width: 48em) {
+    .hero {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: calc(var(-space) * 3);
+        padding-block: calc(var(-space) * 5) calc(var(--space) * 6);
+    }
+
+    .hero-figure {
+        justify-self: center;
+    }
+}
