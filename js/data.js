@@ -30,7 +30,7 @@ const projects = [
         id: "pomoki",
         title: "POMOKI",
         status: "building",
-        description: "A pomodoro timer with cheklists and sticky notes, for people who lose track of tasks",
+        description: "A pomodoro timer with checklists and sticky notes, for people who lose track of tasks",
         stack: ["JavaScript", "Capacitor"],
         image: "assets/img/pomoki.png",
         alt: "Screenshot of POMOKI showing the timer and sticky notes",
