@@ -168,9 +168,10 @@ body {
     top: 100%;
     left: 0;
     right: 0;
+    z-index: 40;
     display: none;
     padding: var(--space) calc(var(--space) * 1.5) calc(var(--space) * 1.5);
-    background-color: var(--space);
+    background-color: var(--paper);
     border-bottom: 1px solid var(--line);
 }
 

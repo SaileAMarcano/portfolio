@@ -41,3 +41,31 @@ function renderProjects(list) {
 }
 
 renderProjects(projects);
+
+const navToggle = document.querySelector(".nav-toggle");
+const nav = document.getElementById("primary-nav");
+
+function toggleMenu() {
+    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+
+    navToggle.setAttribute("aria-expanded", String(!isOpen));
+    nav.setAttribute("data-open", String(!isOpen));
+}
+
+navToggle.addEventListener("click", toggleMenu);
+
+nav.addEventListener("click", function (event) {
+    if (event.target.tagName === "A") {
+        toggleMenu();
+    }
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+        const isOpen = navToggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) {
+            toggleMenu();
+            navToggle.focus();
+        }
+    }
+});

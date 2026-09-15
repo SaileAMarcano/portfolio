@@ -10,10 +10,10 @@ const projects = [
         status: "shipped",
         description: "A social space where readers can track what they're reading and share it with others.",
         stack: ["HTML", "CSS", "JavaScript"],
-        image: "assets/img/sukis.png",
+        image: "assets/img/construyendo.png",
         alt: "Screenshot of Suki's Literary Corner home page",
         demo: "",
-        repo: "https://github.com/SaileAMarcano/blog"
+        repo: "https://github.com/SaileAMarcano/bookish-corner"
     },
     {
         id: "Calculator",
@@ -21,10 +21,10 @@ const projects = [
         status: "shipped",
         description: "A desktop calculator with an interface I illustrated myself, packaged with Electron.",
         stack: ["JavaScript", "Electron"],
-        image: "assets/img/calculator.png",
+        image: "assets/img/calculadoramok.png",
         alt: "Screenshot of the Penguin Calculator app",
-        demo: "",
-        repo: ""
+        demo: "https://saileamarcano.github.io/calculadora-pinguino/",
+        repo: "https://github.com/SaileAMarcano/calculadora-pinguino"
     },
     {
         id: "pomoki",
@@ -32,9 +32,9 @@ const projects = [
         status: "building",
         description: "A pomodoro timer with checklists and sticky notes, for people who lose track of tasks",
         stack: ["JavaScript", "Capacitor"],
-        image: "assets/img/pomoki.png",
+        image: "assets/img/pomokimok.png",
         alt: "Screenshot of POMOKI showing the timer and sticky notes",
-        demo: "",
-        repo: ""
+        demo: "https://saileamarcano.github.io/Pomoki/",
+        repo: "https://github.com/SaileAMarcano/Pomoki"
     }
 ];
