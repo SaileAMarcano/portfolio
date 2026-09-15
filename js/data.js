@@ -7,7 +7,7 @@ const projects = [
     {
         id: "Sukis",
         title: "Suki's Literary Corner",
-        status: "shipped",
+        status: "building",
         description: "A social space where readers can track what they're reading and share it with others.",
         stack: ["HTML", "CSS", "JavaScript"],
         image: "assets/img/construyendo.png",
@@ -29,8 +29,8 @@ const projects = [
     {
         id: "pomoki",
         title: "POMOKI",
-        status: "building",
-        description: "A pomodoro timer with checklists and sticky notes, for people who lose track of tasks",
+        status: "shipped",
+        description: "A pomodoro timer with checklists and sticky notes, for people who lose track of tasks.",
         stack: ["JavaScript", "Capacitor"],
         image: "assets/img/pomokimok.png",
         alt: "Screenshot of POMOKI showing the timer and sticky notes",
