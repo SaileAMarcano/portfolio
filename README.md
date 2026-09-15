@@ -4,7 +4,7 @@ My personal portfolio, built from scratch with HTML, CSS and vanilla JavaScript.
 
 **Live site:** https://saileamarcano.github.io/portfolio/
 
-![Portfolio preview](assets/img/og.png)
+![Portfolio preview](assets/img/fotofondo.png)
 
 ## About
 
