@@ -33,7 +33,7 @@ building, so the site shows progress instead of a frozen snapshot.
 - Open Graph tags for link previews
 
 ## Structure
-
+```
 portfolio/
 ├── index.html
 ├── css/
@@ -44,7 +44,7 @@ portfolio/
 └── assets/
 ├── img/
 └── fonts/
-
+```
 
 ## Running it locally
 
